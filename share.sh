@@ -15,8 +15,12 @@ privatebinUrl=""
 privatebinDeleteUrl=""
 privatebinMsg=""
 
-echo -n "Folder or file to share. Please insert full path. Eg. /tmp/testFolder, /tmp/testFile.txt or ~/shared: "
-read path
+if [[ $1 ]]; then
+  path="$1"
+else
+  echo -n "Folder or file to share. Please insert full path. Eg. /tmp/testFolder, /tmp/testFile.txt or ~/shared: "
+  read path
+fi
 if [[ -d $path ]]; then
   pathType="dir"
 elif [[ -f $path ]]; then
