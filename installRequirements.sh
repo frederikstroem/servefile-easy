@@ -2,5 +2,5 @@
 
 sudo update
 
-sudo apt -y install screen curl jq
+sudo apt -y install screen curl jq servefile
 sudo npm install -g https://github.com/amine7536/privatebin-cli
